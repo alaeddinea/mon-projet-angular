@@ -12,15 +12,13 @@
         <div class="col-xs-12">
             <h2>Mes appariels</h2>
             <ul class="list-group">
-                <li class="list-group-item"><app-appariel [appareilName]="appariel1" [appareilSatus]="'étient'"></app-appariel></li>
-                <li class="list-group-item"><app-appariel [appareilName]="appariel2" [appareilSatus]="'allumer'"> </app-appariel></li>
-                <li class="list-group-item"><app-appariel [appareilName]="appariel3" [appareilSatus]="'étient'"></app-appariel></li>
- 
+                <li class="list-group-item">
+                    <app-appariel *ngFor="let appareil of appareils" [appareilName]="appareil.name"
+                        [appareilSatus]="appareil.status"></app-appariel>
+                </li>
+
             </ul>
-            <button class="btn btn-success"
-             [disabled]="!isAuth"
-              (click)="onAllumer()"
-              >tout allumer</button>
+            <button class="btn btn-success" [disabled]="!isAuth" (click)="onAllumer()">tout allumer</button>
         </div>
     </div>
 </div>

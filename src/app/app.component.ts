@@ -7,9 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 isAuth:boolean=false;
-appariel1="machine à lavé";
-appariel2="télévision";
-appariel3="rodinateur";
+appareils=[{
+  name: 'Ordinateur' ,
+  status : 'allumé'
+},
+{
+  name: 'Télévision',
+  status :'allumé'
+},
+{
+  name: "Machine à lavé",
+  status : 'étient'
+}
+];
+
+
 constructor(){
   setTimeout(() => {
     this.isAuth=true;
