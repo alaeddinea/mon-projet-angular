@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 isAuth:boolean=false;
+appariel1="machine à lavé";
+appariel2="télévision";
+appariel3="rodinateur";
 constructor(){
   setTimeout(() => {
     this.isAuth=true;
