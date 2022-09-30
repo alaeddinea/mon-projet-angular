@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 isAuth:boolean=false;
+LastUpdate =new Date();
 appareils=[{
   name: 'Ordinateur' ,
   status : 'allumé'
